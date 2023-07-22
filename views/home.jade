@@ -1,6 +1,55 @@
 extends layout
 
 block content
-  p Welcome to the Home Page!
+  div.container
+    table.table.table-dark#employee
+      thead
+        tr
+          th(scope='col') Id
+          th(scope='col') Name
+          th(scope='col') Active
+          th(scope='col') Actions
+      tbody
 
- 
+  .modal.fade#exampleModal(tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .modal-header
+          h5.modal-title#exampleModalLabel.ml-auto Add Employee
+          button.close(type="button" data-dismiss="modal" aria-label="Close")
+            span(aria-hidden="true") &times;
+        .modal-body
+          form#employeeForm
+            .row
+              .col-12.mb-3.text-center
+                input(type="text" name="name" id="employeeName" placeholder="Employee Name" required)
+              .col-12.mb-3.text-center
+                input(type="text" name="active" id="employeeActive" placeholder="Active / InActive" required)
+              .col-12.text-center
+                button#addEmployee(type="submit") Submit
+
+  .modal.fade#updateEmployeeModal(tabindex="-1" aria-labelledby="updateEmployeeModalLabel" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .modal-header
+          h5.modal-title#updateEmployeeModalLabel.ml-auto Update Employee
+          button.close(type="button" data-dismiss="modal" aria-label="Close")
+            span(aria-hidden="true") &times;
+        .modal-body
+          form#updateEmployeeForm()
+            .row
+              .col-12.mb-3.text-center
+                input(type="hidden" id="existingEmployeeId" name="existingId")
+                input(type="text" name="existingName" id="existingEmployeeName" placeholder="Employee Name" required)
+              .col-12.mb-3.text-center
+                input(type="text" name="existingActive" id="existingEmployeeActive" placeholder="Active / InActive" required)
+              .col-12.text-center
+                button#addEmployee(type="submit") Submit
+
+
+
+
+
+
+
+
