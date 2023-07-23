@@ -1,3 +1,49 @@
-th,tbody{
+html,
+body {
+    height: 100% !important;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #1e1f33;
+    color: #fff;
+}
+
+
+
+nav {
+    background-color: #0e122f !important;
+    color: #fff !important;
+}
+
+.navbar-toggler {
+    border-color: #fff !important;
+}
+
+.navbar-brand,
+.nav-link {
+    color: #fff !important;
+}
+
+.modal-content {
+    background-color: #1e1f33 !important;
+    color: #fff !important;
+}
+
+footer {
+    text-align: center;
+    background-color: #0e122f;
+    color: #fff;
+    height: 40px;
+}
+
+footer p {
+    line-height: 40px;
+}
+
+th,
+tbody {
     text-align: center !important;
 }
